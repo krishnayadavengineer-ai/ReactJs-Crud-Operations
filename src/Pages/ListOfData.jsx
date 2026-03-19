@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const ListOfData = () => {
     const [studentData, setStudentData] = useState([])
 
-
+    //axios
     useEffect(() => {
         const getDetails = async () => {
             const res = await axios.get("http://localhost:8080/getAll")
@@ -12,7 +12,18 @@ const ListOfData = () => {
 
         }
         getDetails();
-    },[])
+    }, [])
+
+    // // fetch
+    // useEffect(() => {
+    //     const datGet = () => {
+    //         fetch("http://localhost:8080/getAll")
+    //             .then(res => res.json())
+    //             .then(data => setStudentData(data))
+    //     }
+    //     datGet();
+    // }, [])
+
 
 
 
@@ -28,7 +39,7 @@ const ListOfData = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {studentData.map((studentData) => (
+                    {/* {studentData.map((studentData) => (
                         <tr key={studentData.id}>
                             <td>{studentData.id}</td>
                             <td>{studentData.name}</td>
@@ -36,7 +47,18 @@ const ListOfData = () => {
                             <td>{studentData.email}</td>
                         </tr>
 
-                    ))}
+                    ))} */}
+
+                    {studentData.map((details) => (
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    )
+
+                    )}
                 </tbody>
 
                 {/* {studentData.map((data)=>(

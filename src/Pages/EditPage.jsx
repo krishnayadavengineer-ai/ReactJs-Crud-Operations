@@ -11,7 +11,6 @@ const EditPage = () => {
         email: ""
     })
 
-
     //Step1-> getting Details First
     useEffect(() => {
         const getDataFrom = async () => {
@@ -33,6 +32,7 @@ const EditPage = () => {
     const handleSubmit = async () => {
         const res = await axios.put(`http://localhost:8080/updateDetails/${id}`)
         setEditData(res.data)
+
     }
     return (
         <div>

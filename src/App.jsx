@@ -1,24 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import { NameContext } from './Components/Componenet1'
-import Component2 from './Components/Component2'
-import Example2 from './Components/Example2'
+import Demo from './Pages/Example3'
+import Demo1 from './Pratice/Demo1'
+import Krishna from './Pratice/Demo2'
+import Validations from './Pratice/Validations'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [name,setName]=useState();
+ 
   return (
     <>
-      <div>
-        {/* <NameContext.Provider value={name} >
-           <input type='text' placeholder='enter_name' onChange={(e)=>setName(e.target.value)}></input>
-          <Component2></Component2>
-        </NameContext.Provider> */}
-
-        <Example2></Example2>
-      </div>
+ 
+   <Validations/>
     </>
   )
 }
